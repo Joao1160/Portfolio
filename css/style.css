@@ -61,6 +61,7 @@ ul li {
 @media (max-width: 992px) {
   .landing .landing-content .landing-name {
     font-size: 3rem;
+    width: 300px;
   }
 }
 .landing .landing-content .landing-title {
