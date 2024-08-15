@@ -1,0 +1,358 @@
+/* Global */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --main-color: #00b7c7;
+  --secondary-color: #222;
+  --transparent-color: rgb(15 116 143 / 70%);
+  --section-padding: 100px;
+  --font-family1: "Outfit", sans-serif;
+  --font-family2: "Zain", sans-serif;
+  --font-family3: "Open Sans", sans-serif;
+  --font-family4: "Barlow", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+.margin-destination {
+  display: block;
+  margin: 20px;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* landing */
+
+.landing {
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  background-attachment: fixed;
+}
+.landing .landing-content {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.landing .landing-content .landing-name {
+  color: #fff;
+  font-size: 5rem;
+  margin-bottom: 30px;
+  font-family: var(--font-family2);
+}
+@media (max-width: 992px) {
+  .landing .landing-content .landing-name {
+    font-size: 3rem;
+  }
+}
+.landing .landing-content .landing-title {
+  color: #fff;
+  font-size: 32px;
+  font-family: var(--font-family2);
+  font-weight: 300;
+}
+.landing .landing-icon {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 2s;
+}
+.landing .landing-icon img {
+  max-width: 40px;
+  transition: all 2s;
+}
+
+.landing .landing-icon i {
+  font-size: 32px;
+  color: #fff;
+  display: none;
+  transition: all 2s;
+}
+
+.landing .landing-icon:hover img {
+  display: none;
+}
+.landing .landing-icon:hover i {
+  display: block;
+}
+
+/* Biography */
+.biography {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+.biography .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 60px 0;
+  gap: 30px;
+  position: relative;
+}
+.biography .container .description {
+  width: 60%;
+}
+.biography .container .description .name {
+  margin: 20px 0;
+  font-size: 40px;
+  font-family: var(--font-family2);
+}
+.biography .container .description .desc {
+  margin: 20px 0;
+  font-family: var(--font-family2);
+  font-size: 20px;
+  line-height: 1.5;
+}
+.short-line {
+  display: block;
+  width: 150px;
+  height: 2px;
+  background-color: var(--main-color);
+  margin: 35px 0;
+}
+.biography .container .description .text {
+  margin: 20px 0;
+  font-family: var(--font-family2);
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 100;
+}
+.biography .container .description .text .highlight-text {
+  font-weight: bold;
+  font-size: 18px;
+}
+.biography .container .pic {
+  flex: 1;
+}
+.biography .container .pic img {
+  max-width: 400px;
+  border-radius: 50%;
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+  .biography .container .description {
+    width: 100%;
+  }
+
+  .biography .container .description .desc {
+    width: 70%;
+  }
+  .biography .container .pic {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+  }
+  .biography .container .pic img {
+    max-width: 150px;
+  }
+}
+@media (max-width: 768px) {
+  .biography .container .description {
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 250px;
+    text-align: center;
+  }
+
+  .biography .container .description .desc {
+    width: 100%;
+  }
+  .biography .container .pic {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .biography .container .pic img {
+    max-width: 250px;
+  }
+
+  .biography .container .description .short-line {
+    background-color: var(--main-color);
+    margin: 50px auto;
+  }
+}
+
+/* ability */
+.ability {
+  background-image: url(../images/ability.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: #f2f2f2;
+  position: relative;
+  z-index: 0;
+}
+.ability::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #00000095;
+  z-index: -1;
+}
+.ability .container {
+  padding: 60px 20px;
+}
+.ability .container .section-heading .heading {
+  font-family: var(--font-family2);
+  font-size: 3em;
+  text-transform: capitalize;
+}
+.ability .container .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+  gap: 40px;
+}
+.ability .container .content .item {
+  position: relative;
+  /* padding: 40px; */
+}
+.ability .container .content .item img {
+  max-width: 50px;
+  /* margin-right: 20px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ability .container .content .item h3 {
+  font-family: var(--font-family2);
+  font-size: 1.5em;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  transform: translateX(70px);
+}
+.ability .container .content .item p {
+  font-family: var(--font-family2);
+  font-size: 18px;
+}
+
+  @media (max-width: 991px) {
+    .container .section-heading {
+      text-align: center;
+    }
+    .container .section-heading .short-line {
+      margin: 35px auto 50px;
+    }
+    .ability .container .content {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    }
+    .ability .container .content .item {
+      padding: 0;
+    }
+    .ability .container .content .item h3 {
+      font-size: 1em;
+    }
+  }
+
+@media (max-width: 768px) {
+  .ability .container .content {
+    grid-template-columns: repeat(300px, 1fr);
+  }
+  .ability .container .content .item {
+    padding: 0;
+    text-align: center;
+  }
+  .ability .container .content .item h3 {
+    font-size: 1em;
+    transform: translateX(0);
+    margin: 20px 0;
+  }
+
+  .ability .container .content .item img {
+    max-width: 50px;
+    position: relative;
+  }
+}
+/* Skills */
+.skills{
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding-top: 60px;
+}
+.skills-items .skill-heading{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.skills-items .skill-heading h3{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+}
+.skills-items .skill-heading i{
+  font-size: 36px;
+}
+.skills-items{
+  padding-top: 30px;
+}
+.skills-items ul{
+  padding: 0;
+  margin-bottom: 50px;
+}
+.skills-items .skill-development-items{
+  display: grid; 
+  grid-template-columns: auto auto auto  ;
+  padding: 0;
+  gap: 20px;
+  justify-content: center;
+}
+.skills-items .skill-development-items li{
+  width: 100px ;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #555;
+  line-height: 100px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.skills-items .skill-tools{
+  padding: 0 20px;
+}
+.skills-items .skill-tools-items li{
+  text-transform: capitalize;
+  width: 150px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.skills-items .skill-tools-items li i{
+ margin-right: 10px;
+ font-size: 14px;
+ color: #666;
+ width: 20%;
+}
+@media (max-width: 768px) {
+  .skill-development{
+    border-bottom: 1px solid #555;
+    margin-bottom: 30px;
+  }.skill-tools{
+    border-bottom: 1px solid #555;
+    margin-bottom: 30px;
+  }.skills-items .skill-tools:last-child{
+    border-bottom: 0;
+  }  
+}
