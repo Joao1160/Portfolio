@@ -427,14 +427,14 @@ ul li {
   border: 18px solid transparent;
   border-left-color: var(--secondary-color);
   top: 15px;
-  right: -36px;
+  right: -34px;
   transition: 0.5s;
 }
 .experience-item:nth-child(2n) .data::after {
   border: 18px solid transparent;
   border-right-color: var(--secondary-color);
   right: unset;
-  left: -36px;
+  left: -34px;
 }
 .experience-item .icon {
   background-color: var(--secondary-color);
@@ -521,7 +521,7 @@ ul li {
     border: 18px solid transparent;
     border-right-color: var(--secondary-color);
     right: unset;
-    left: -36px;
+    left: -34px;
   }
   .experience-item .data,
   .experience-item:nth-child(2n) .data {
@@ -563,7 +563,7 @@ ul li {
     border: 13px solid transparent;
     border-right-color: var(--secondary-color);
     right: unset;
-    left: -26px;
+    left: -24px;
     top: 20px;
 
   }
@@ -574,7 +574,7 @@ footer {
   background: linear-gradient(
     90deg,
     rgba(15, 116, 143, 1) 29%,
-    rgba(0, 26, 255, 1) 81%
+    rgb(0, 77, 165) 81%
   );
   padding: 50px 0;
 }
