@@ -587,7 +587,7 @@ ul li {
 .my-projects .project .title h3 {
  font-size: 32px;
  font-weight: bold;
-
+ text-transform: capitalize;
 }
 .my-projects .project ul {
  display: flex;
